@@ -6,11 +6,13 @@ export const Footer = () => {
   nisi saepe modi similique necessitatibus omnis atque architecto! Ipsam
   aspernatur assumenda optio.`;
 
+  const titles = ["Find", "Follow", "Contact"];
+
   return (
-    <footer className="flex flex-row py-4 px-12">
-      <FooterContent title="Find" content={loremIpsum} />
-      <FooterContent title="Follow" content={loremIpsum} />
-      <FooterContent title="Contact" content={loremIpsum} />
+    <footer className="flex flex-row py-4 px-12 z-0">
+      {titles.map((title) => (
+        <FooterContent title={title} content={loremIpsum} />
+      ))}
     </footer>
   );
 };

@@ -1,9 +1,13 @@
 import { Footer } from "../components/footer";
+import { NavigationBar } from "../components/nav-bar";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
+      <NavigationBar />
       <Footer />
     </>
   );
-}
+};
+
+export default Home;
