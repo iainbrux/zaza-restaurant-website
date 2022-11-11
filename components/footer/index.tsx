@@ -7,7 +7,7 @@ export const Footer = () => {
   aspernatur assumenda optio.`;
 
   return (
-    <footer className="flex flex-row py-4 px-12">
+    <footer className="flex flex-row py-4 px-12 fixed bottom-0 bg-slate-900">
       <FooterContent title="Find" content={loremIpsum} />
       <FooterContent title="Follow" content={loremIpsum} />
       <FooterContent title="Contact" content={loremIpsum} />
