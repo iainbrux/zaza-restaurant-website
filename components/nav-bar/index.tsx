@@ -12,6 +12,12 @@ export const NavigationBar = () => {
           <Link className="mx-4" href="/menu">
             MENU
           </Link>
+          <Link className="mx-4" href="/about">
+            ABOUT
+          </Link>
+          <Link className="mx-4" href="/contact">
+            CONTACT
+          </Link>
           <Link
             className="py-2 px-4 bg-cyan-500 rounded-full mx-2"
             href="/contact"
