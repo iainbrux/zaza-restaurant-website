@@ -3,8 +3,8 @@ import Link from "next/link";
 export const NavigationBar = () => {
   return (
     <header>
-      <nav className="flex flex-row items-center justify-between py-4 px-12 border-b-2 shadow-sm border-sky-500 fixed top-0 w-full bg-gradient-to-r from-violet-500 to-fuchsia-500s bg-black z-10">
-        <img src="/logo-ipsum.svg" />
+      <nav className="flex flex-row items-center justify-center py-4 border-b-2 shadow-sm border-sky-500 fixed top-0 w-full bg-gradient-to-r from-violet-500 to-fuchsia-500s bg-black z-10">
+        <img src="/logo-ipsum.svg" className="absolute left-8" />
         <div>
           <Link className="mx-4" href="/">
             HOME
@@ -22,7 +22,7 @@ export const NavigationBar = () => {
             className="py-2 px-4 bg-cyan-500 rounded-full mx-2"
             href="/contact"
           >
-            CONTACT
+            RESERVATIONS
           </Link>
         </div>
       </nav>
