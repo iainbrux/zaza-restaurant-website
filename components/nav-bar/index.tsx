@@ -27,7 +27,7 @@ export const NavigationBar = () => {
           </Link>
           <Link
             className="py-2 px-4 bg-cyan-500 rounded-full mx-2"
-            href="/contact"
+            href="/reservations"
           >
             RESERVATIONS
           </Link>
