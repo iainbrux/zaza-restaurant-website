@@ -2,13 +2,11 @@
   "extends": [
     "airbnb-typescript",
     "next/core-web-vitals",
-    "plugin:cypress/recommended",
-    "plugin:jest/recommended",
-    "plugin:jest/style",
+    // Comment in the below lines if we decide to use jest
+    // "plugin:jest/recommended",
+    // "plugin:jest/style",
     "plugin:unicorn/recommended",
-    "prettier",
-    "prettier/react",
-    "prettier/@typescript-eslint"
+    "prettier"
   ],
   "overrides": [
     {
@@ -25,7 +23,7 @@
       }
     },
     {
-      "files": ["src/pages/**/*.ts"],
+      "files": ["pages/**/*.{ts,tsx}"],
       "rules": {
         "import/no-default-export": "off"
       }

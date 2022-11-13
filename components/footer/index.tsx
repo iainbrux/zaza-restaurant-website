@@ -1,12 +1,12 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FooterContent } from "./content";
 import {
   faFacebookF,
   faInstagram,
   faTwitter,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
+import { FooterContent } from "./content";
 
 type WindowSizing = {
   innerWidth: number;
@@ -18,8 +18,8 @@ export const Footer = () => {
 
   const handleResize = () =>
     setWindowSizing({
-      innerWidth: window.innerWidth,
       innerHeight: window.innerHeight,
+      innerWidth: window.innerWidth,
     });
 
   useEffect(() => {
@@ -81,9 +81,9 @@ export const Footer = () => {
 
   return (
     <footer className={footerClassName}>
-      <FooterContent title="Address" content={addressContent} />
-      <FooterContent title="Follow" content={followContent} />
-      <FooterContent title="Contact" content={contactContent} />
+      <FooterContent content={addressContent} title="Address" />
+      <FooterContent content={followContent} title="Follow" />
+      <FooterContent content={contactContent} title="Contact" />
     </footer>
   );
 };
