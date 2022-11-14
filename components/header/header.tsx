@@ -1,12 +1,12 @@
-export interface headerProps {
-  Header: string;
+export interface HeaderProperties {
+  header: string;
 }
 
-export const Header = ({ Header }: headerProps) => {
+export const Header = ({ header }: HeaderProperties) => {
   return (
     <div className="mt-40 flex flex-row justify-center">
       <h1 className="decoration-black text-3xl font-bold underline underline-offset-8 decoration-black">
-        {Header}
+        {header}
       </h1>
     </div>
   );
