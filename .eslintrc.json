@@ -2,9 +2,8 @@
   "extends": [
     "airbnb-typescript",
     "next/core-web-vitals",
-    // Comment in the below lines if we decide to use jest
-    // "plugin:jest/recommended",
-    // "plugin:jest/style",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
     "plugin:unicorn/recommended",
     "prettier"
   ],
@@ -23,7 +22,7 @@
       }
     },
     {
-      "files": ["src/pages/**/*.{ts,tsx}"],
+      "files": ["src/pages/**/*.{ts,tsx}", "jest.config.ts"],
       "rules": {
         "import/no-default-export": "off"
       }
@@ -63,5 +62,6 @@
     "unicorn/no-useless-undefined": "error",
     "unicorn/prevent-abbreviations": "error",
     "unicorn/no-reduce": "error"
-  }
+  },
+  "plugins": ["react", "jest"]
 }
