@@ -1,7 +1,7 @@
 import { Footer } from "../components/footer";
 import { NavigationBar } from "../components/nav-bar";
 
-const Home = () => {
+export const Home = () => {
   return (
     <>
       <NavigationBar />
@@ -9,5 +9,3 @@ const Home = () => {
     </>
   );
 };
-
-export default Home;

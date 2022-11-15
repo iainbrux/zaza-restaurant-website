@@ -2,7 +2,7 @@ import { Footer } from "../../components/footer";
 import { NavigationBar } from "../../components/nav-bar";
 import { Content } from "./content";
 
-const Contact = () => {
+export const Contact = () => {
   return (
     <>
       <NavigationBar />
@@ -11,5 +11,3 @@ const Contact = () => {
     </>
   );
 };
-
-export default Contact;

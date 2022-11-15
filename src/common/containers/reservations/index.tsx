@@ -1,7 +1,7 @@
 import { Footer } from "../../components/footer";
 import { NavigationBar } from "../../components/nav-bar";
 
-const About = () => {
+export const Reservations = () => {
   return (
     <>
       <NavigationBar />
@@ -9,5 +9,3 @@ const About = () => {
     </>
   );
 };
-
-export default About;
