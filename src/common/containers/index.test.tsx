@@ -7,4 +7,10 @@ describe("Home page tests", () => {
 
     expect(screen.getByTestId("navigation")).toBeInTheDocument();
   });
+
+  it("Should render the footer", () => {
+    render(<Home />);
+
+    expect(screen.getByTestId("footer")).toBeInTheDocument();
+  });
 });

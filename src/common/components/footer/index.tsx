@@ -28,7 +28,7 @@ export const Footer = () => {
   }, []);
 
   const addressContent = (
-    <p className="text-center">
+    <p className="text-center" data-testid="footer-address-content">
       84 Mersey Street
       <br />
       Warrington
@@ -37,28 +37,45 @@ export const Footer = () => {
     </p>
   );
 
+  // TODO: Add hrefs for social media links (unknown yet)
   const followContent = (
-    <div className="text-center">
+    <div className="text-center" data-testid="footer-follow-content">
       <ul>
         <li className="inline m-2">
-          <FontAwesomeIcon icon={faFacebookF} size="lg" />
+          <FontAwesomeIcon
+            data-testid="footer-follow-fb"
+            icon={faFacebookF}
+            size="lg"
+          />
         </li>
         <li className="inline m-2">
-          <FontAwesomeIcon icon={faInstagram} size="lg" />
+          <FontAwesomeIcon
+            data-testid="footer-follow-instagram"
+            icon={faInstagram}
+            size="lg"
+          />
         </li>
         <li className="inline m-2">
-          <FontAwesomeIcon icon={faTwitter} size="lg" />
+          <FontAwesomeIcon
+            data-testid="footer-follow-twitter"
+            icon={faTwitter}
+            size="lg"
+          />
         </li>
       </ul>
-      <p className="mt-4">
-        &copy; 2022 B&amp;C Digital
-        <FontAwesomeIcon className="ml-2" icon={faGithub} />
+      <p className="mt-4" data-testid="footer-follow-content-watermark">
+        &copy; 2022 BMC Digital
+        <FontAwesomeIcon
+          className="ml-2"
+          data-testid="footer-follow-github"
+          icon={faGithub}
+        />
       </p>
     </div>
   );
 
   const contactContent = (
-    <p className="text-center">
+    <p className="text-center" data-testid="footer-contact-content">
       booking@istanbulgrillwarrington.co.uk
       <br />
       01925 657 287
@@ -80,10 +97,22 @@ export const Footer = () => {
       : `${sharedStyling} fixed bottom-0 flex-wrap divide-y-2`;
 
   return (
-    <footer className={footerClassName}>
-      <FooterContent content={addressContent} title="Address" />
-      <FooterContent content={followContent} title="Follow" />
-      <FooterContent content={contactContent} title="Contact" />
+    <footer className={footerClassName} data-testid="footer">
+      <FooterContent
+        content={addressContent}
+        dataTestId="footer-address"
+        title="Address"
+      />
+      <FooterContent
+        content={followContent}
+        dataTestId="footer-follow"
+        title="Follow"
+      />
+      <FooterContent
+        content={contactContent}
+        dataTestId="footer-contact"
+        title="Contact"
+      />
     </footer>
   );
 };
