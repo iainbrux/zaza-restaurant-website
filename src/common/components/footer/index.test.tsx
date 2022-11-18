@@ -2,15 +2,15 @@ import { act, fireEvent, render, screen } from "@testing-library/react";
 import { Footer } from ".";
 
 describe("Footer integration tests", () => {
-  it("Should render the footer", () => {
+  beforeEach(() => {
     render(<Footer />);
+  });
 
+  it("Should render the footer", () => {
     expect(screen.getByTestId("footer")).toBeInTheDocument();
   });
 
   it("Should display the restaurant contact information in the footer", () => {
-    render(<Footer />);
-
     const contactHeader = "Contact";
     const contactEmail = "booking@istanbulgrillwarrington.co.uk";
     const contactNumber = "01925 657 287";
@@ -28,8 +28,6 @@ describe("Footer integration tests", () => {
   });
 
   it("Should display the restaurant address in the footer", () => {
-    render(<Footer />);
-
     const firstLine = "84 Mersey Street";
     const city = "Warrington";
     const postalCode = "WA1 2BP";
@@ -49,8 +47,6 @@ describe("Footer integration tests", () => {
   });
 
   it("Should display the follow links in the footer", () => {
-    render(<Footer />);
-
     expect(screen.getByTestId("footer-follow")).toBeInTheDocument();
     expect(screen.getByTestId("footer-follow-fb")).toBeInTheDocument();
     expect(screen.getByTestId("footer-follow-instagram")).toBeInTheDocument();
@@ -58,8 +54,6 @@ describe("Footer integration tests", () => {
   });
 
   it("Should include the watermark for BMC Digital", () => {
-    render(<Footer />);
-
     expect(
       screen.getByTestId("footer-follow-content-watermark").textContent
     ).toContain("BMC Digital");
@@ -67,8 +61,6 @@ describe("Footer integration tests", () => {
   });
 
   it("Should responsively resize the footer based on the width of the screen", () => {
-    render(<Footer />);
-
     act(() => {
       window.innerWidth = 700;
       fireEvent(window, new Event("resize"));

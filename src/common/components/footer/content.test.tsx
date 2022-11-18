@@ -10,7 +10,7 @@ describe("FooterContent unit tests", () => {
     <p data-testid={testId + "-content"}>{testContent}</p>
   );
 
-  it("Should take custom content and render component", () => {
+  beforeEach(() => {
     render(
       <FooterContent
         content={testContentComponent}
@@ -18,20 +18,14 @@ describe("FooterContent unit tests", () => {
         title={testTitle}
       />
     );
+  });
 
+  it("Should take custom content and render component", () => {
     const element = screen.getByTestId(testId);
     expect(element).toBeInTheDocument();
   });
 
   it("Should take custom content and display it to the user", () => {
-    render(
-      <FooterContent
-        content={testContentComponent}
-        dataTestId={testId}
-        title={testTitle}
-      />
-    );
-
     const title = screen.getByTestId(testId + "-header");
     const content = screen.getByTestId(testId + "-content");
 
