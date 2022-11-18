@@ -89,12 +89,10 @@ export const Footer = () => {
   const sharedStyling =
     "flex justify-center bg-slate-900 w-screen divide-dashed divide-slate-800 min-w-def";
 
-  // Remove fixed bottom-0 when we've got content for the pages
-
   const footerClassName =
     typeof window === "undefined" || isDesktopView
-      ? `${sharedStyling} fixed bottom-0 divide-x-2`
-      : `${sharedStyling} fixed bottom-0 flex-wrap divide-y-2`;
+      ? `${sharedStyling} absolute bottom-0 divide-x-2`
+      : `${sharedStyling} absolute bottom-0 flex-wrap divide-y-2`;
 
   return (
     <footer className={footerClassName} data-testid="footer">

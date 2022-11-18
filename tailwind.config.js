@@ -9,6 +9,9 @@ module.exports = {
     minWidth: {
       def: "295px",
     },
+    fontFamily: {
+      display: ["Oswald"],
+    },
     extend: {},
   },
   plugins: [],

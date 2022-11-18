@@ -13,4 +13,8 @@ describe("Home page tests", () => {
   it("Should render the footer", () => {
     expect(screen.getByTestId("footer")).toBeInTheDocument();
   });
+
+  it("Should have a video background", () => {
+    expect(screen.getByTestId("home-page-video")).toBeInTheDocument();
+  });
 });
