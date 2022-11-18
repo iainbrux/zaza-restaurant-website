@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import { Home } from ".";
+import { About } from ".";
 
-describe("Home page tests", () => {
+describe("About page tests", () => {
   beforeEach(() => {
-    render(<Home />);
+    render(<About />);
   });
 
   it("Should render the nav bar", () => {
