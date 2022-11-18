@@ -91,8 +91,8 @@ export const Footer = () => {
 
   const footerClassName =
     typeof window === "undefined" || isDesktopView
-      ? `${sharedStyling} absolute bottom-0 divide-x-2`
-      : `${sharedStyling} absolute bottom-0 flex-wrap divide-y-2`;
+      ? `${sharedStyling} divide-x-2`
+      : `${sharedStyling} flex-wrap divide-y-2`;
 
   return (
     <footer className={footerClassName} data-testid="footer">

@@ -1,3 +1,4 @@
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { render, screen } from "@testing-library/react";
 import { Home } from ".";
 
@@ -16,5 +17,21 @@ describe("Home page tests", () => {
 
   it("Should have a video background", () => {
     expect(screen.getByTestId("home-page-video")).toBeInTheDocument();
+  });
+
+  it("Should have a small divider with a star icon", () => {
+    expect(screen.getByTestId("small-divider")).toBeInTheDocument();
+    expect(screen.getByTestId("small-divider-icon")).toHaveAttribute(
+      "data-icon",
+      faStar.iconName
+    );
+  });
+
+  it("Should have a button that sends users to reservations", () => {
+    expect(screen.getByText("BOOK A TABLE")).toBeInTheDocument();
+    expect(screen.getByText("BOOK A TABLE")).toHaveAttribute(
+      "href",
+      "/reservations"
+    );
   });
 });
