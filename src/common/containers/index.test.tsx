@@ -20,8 +20,8 @@ describe("Home page tests", () => {
   });
 
   it("Should have a small divider with a star icon", () => {
-    expect(screen.getByTestId("small-divider")).toBeInTheDocument();
-    expect(screen.getByTestId("small-divider-icon")).toHaveAttribute(
+    expect(screen.getByTestId("home-page-video-divider")).toBeInTheDocument();
+    expect(screen.getByTestId("home-page-video-divider-icon")).toHaveAttribute(
       "data-icon",
       faStar.iconName
     );

@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-*::-webkit-scrollbar {
-  display: none;
+html {
+  @apply text-white;
+  @apply font-display;
+}
+
+body {
+  overflow-x: hidden;
 }

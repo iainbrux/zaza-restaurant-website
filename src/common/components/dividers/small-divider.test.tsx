@@ -5,13 +5,13 @@ import { SmallDivider } from "./small-divider";
 
 describe("Small divider tests", () => {
   it("Renders the divider", () => {
-    render(<SmallDivider />);
+    render(<SmallDivider dataTestId="small-divider" />);
 
     expect(screen.getByTestId("small-divider")).toBeInTheDocument();
   });
 
   it("Ensures the star is displayed as default", () => {
-    render(<SmallDivider />);
+    render(<SmallDivider dataTestId="small-divider" />);
 
     expect(screen.getByTestId("small-divider-icon")).toHaveAttribute(
       "data-icon",
@@ -20,7 +20,7 @@ describe("Small divider tests", () => {
   });
 
   it("Can have a custom icon provided and render that icon instead", () => {
-    render(<SmallDivider icon={faGithub} />);
+    render(<SmallDivider dataTestId="small-divider" icon={faGithub} />);
 
     expect(screen.getByTestId("small-divider-icon")).toHaveAttribute(
       "data-icon",
