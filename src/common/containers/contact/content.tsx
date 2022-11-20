@@ -1,4 +1,3 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 const onSubmit = (values: any) => {
   alert(JSON.stringify(values, null, 2));
