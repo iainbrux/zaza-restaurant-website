@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 const onSubmit = (values: any) => {
-  alert(JSON.stringify(values, null, 2));
+  console.log(values, "submitted");
 };
 
 export const Content = () => {
@@ -29,7 +29,7 @@ export const Content = () => {
           <div className="flex flex-col mb-3">
             <label htmlFor="contact-form-name">Name</label>
             <input
-              className="mt-2 p-1.5 border rounded bg-gray-50 focus:outline-none"
+              className="mt-2 p-1.5 border rounded bg-gray-50 focus:outline-none bg-orange-200"
               id="contact-form-name"
               placeholder="John Smith"
               type="text"
@@ -38,7 +38,7 @@ export const Content = () => {
           <div className="flex flex-col mb-3">
             <label htmlFor="contact-form-email">Email</label>
             <input
-              className="mt-2 p-1.5 border rounded bg-gray-50 focus:outline-none"
+              className="mt-2 p-1.5 border rounded bg-gray-50 focus:outline-none bg-orange-200"
               id="contact-form-email"
               placeholder="JohnSmith@mymail.com"
               type="text"
@@ -47,12 +47,12 @@ export const Content = () => {
                 required: true,
               })}
             />
-            {errors.email && <span>Invalid email</span>}
+            {errors.email && <span className="">Invalid email</span>}
           </div>
           <div className="flex flex-col mb-3">
             <label htmlFor="contact-form-subject">Subject</label>
             <input
-              className="mt-2 p-1.5 border rounded bg-gray-50 focus:outline-none"
+              className="mt-2 p-1.5 border rounded bg-gray-50 focus:outline-none bg-orange-200"
               id="contact-form-subject"
               placeholder="Subject"
               type="text"
@@ -61,13 +61,13 @@ export const Content = () => {
           <div className="flex flex-col mb-3">
             <label htmlFor="contact-form-message">Message</label>
             <textarea
-              className="mt-2 p-1.5 max-h-[300px] min-h-[150px] border rounded bg-gray-50 focus:outline-none"
+              className="mt-2 p-1.5 max-h-[300px] min-h-[150px] border rounded bg-gray-50 focus:outline-none bg-orange-200"
               id="contact-form-message"
               placeholder="Message"
             ></textarea>
           </div>
           <div className="mt-[30px] flex flex-row justify-center">
-            <button className="border px-2 py-1 rounded hover:bg-yellow-500">
+            <button className="border px-2 py-1 rounded bg-orange-200 hover:bg-orange-400">
               Submit
             </button>
           </div>
