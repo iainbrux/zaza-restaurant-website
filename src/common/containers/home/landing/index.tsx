@@ -2,7 +2,7 @@ import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { MutableRefObject } from "react";
-import { SmallDivider } from "../../components/dividers/small-divider";
+import { SmallDivider } from "../../../components/dividers/small-divider";
 
 export type LandingProperties = {
   reference: MutableRefObject<HTMLDivElement | null>;

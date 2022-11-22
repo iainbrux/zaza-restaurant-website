@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { Gallery } from "./gallery";
+import { Gallery } from ".";
 
 describe("Home page gallery tests", () => {
   it("Should render the gallery section", () => {

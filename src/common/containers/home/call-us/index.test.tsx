@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { CallUs } from "./call-us";
+import { CallUs } from ".";
 
 describe("Home page call us tests", () => {
   it("Should render the call us section", () => {

@@ -1,5 +1,5 @@
 import { MutableRefObject } from "react";
-import { Image, ImageProperties } from "../../components/image";
+import { Image, ImageProperties } from "../../../components/image";
 
 export type ThreeImagesProperties = {
   reference: MutableRefObject<HTMLDivElement | null>;

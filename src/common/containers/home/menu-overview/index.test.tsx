@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { MenuOverview } from "./menu-overview";
+import { MenuOverview } from ".";
 
 describe("Home page menu overview tests", () => {
   it("Should render the menu overview", () => {

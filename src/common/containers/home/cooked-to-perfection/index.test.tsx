@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { CookedToPerfection } from "./cooked-to-perfection";
+import { CookedToPerfection } from ".";
 
 describe("Cooked to perfection parallax tests", () => {
   it("Should render the parallax", () => {

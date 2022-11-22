@@ -1,7 +1,7 @@
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { render, screen } from "@testing-library/react";
 import { createRef, MutableRefObject } from "react";
-import { Landing } from "./landing";
+import { Landing } from ".";
 
 describe("Home page landing section tests", () => {
   it("Should render the landing page", () => {

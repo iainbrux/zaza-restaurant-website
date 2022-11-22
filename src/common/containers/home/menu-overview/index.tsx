@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { SmallDivider } from "../../components/dividers/small-divider";
-import { Image } from "../../components/image";
-import { MenuCardProperties } from "../../components/menu-card";
-import { MenuColumn } from "../../components/menu-column/menu-column";
+import { SmallDivider } from "../../../components/dividers/small-divider";
+import { Image } from "../../../components/image";
+import { MenuCardProperties } from "../../../components/menu-card";
+import { MenuColumn } from "../../../components/menu-column/menu-column";
 
 const chefsItems: MenuCardProperties[] = [
   {

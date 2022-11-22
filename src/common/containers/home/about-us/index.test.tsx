@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { AboutUsOverview } from "./about-us";
+import { AboutUsOverview } from ".";
 
 describe("Home page about us section tests", () => {
   it("Should render the about us section", () => {

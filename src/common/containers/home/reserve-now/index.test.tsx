@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { ReserveNow } from "./reserve-now";
+import { ReserveNow } from ".";
 
 describe("Home page reserve now tests", () => {
   it("Should render the reserve now section", () => {

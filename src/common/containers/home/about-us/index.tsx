@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SmallDivider } from "../../components/dividers/small-divider";
+import { SmallDivider } from "../../../components/dividers/small-divider";
 
 export const AboutUsOverview = () => (
   <section

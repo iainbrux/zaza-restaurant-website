@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { createRef, MutableRefObject } from "react";
-import { ThreeImages } from "./three-images";
+import { ThreeImages } from ".";
 
 describe("Three images section tests", () => {
   it("Should render the entire section", () => {
