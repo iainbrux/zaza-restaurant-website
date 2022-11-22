@@ -6,7 +6,6 @@
 @tailwind utilities;
 
 html {
-  @apply text-white;
   @apply font-display;
 }
 
