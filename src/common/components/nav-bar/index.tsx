@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export const NavigationBar = () => {
@@ -8,14 +7,10 @@ export const NavigationBar = () => {
         className="flex flex-row items-center justify-center py-4 border-b-2 shadow-sm border-sky-500 sticky top-0 w-full bg-gradient-to-r from-violet-500 to-fuchsia-500s bg-black z-10"
         data-testid="navbar"
       >
-        <Image
-          alt="logo ipsum"
-          className="absolute left-8"
-          data-testid="nav-logo"
-          height={85}
-          src="/logo-ipsum.svg"
-          width={175}
-        />
+        <picture className="absolute left-8">
+          <source srcSet="/logo-ipsum.svg" type="image/webp"></source>
+          <img alt="logo ipsum" data-testid="nav-logo" />
+        </picture>
         <div>
           <Link className="mx-4" data-testid="nav-home" href="/">
             HOME
