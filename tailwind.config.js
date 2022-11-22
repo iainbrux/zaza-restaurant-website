@@ -11,6 +11,7 @@ module.exports = {
     },
     fontFamily: {
       display: ["Oswald"],
+      description: ["Lato"],
     },
     extend: {},
   },
