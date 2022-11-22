@@ -9,10 +9,12 @@
     "lint": "next lint",
     "test": "jest",
     "test:coverage": "jest --coverage",
+    "test:modified": "jest --onlyChanged",
     "test:watch": "jest --watch",
     "postinstall": "husky install"
   },
   "dependencies": {
+    "@faker-js/faker": "^7.6.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
@@ -32,7 +34,6 @@
     "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0",
     "@jest/globals": "^29.3.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
