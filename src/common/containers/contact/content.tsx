@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import { SmallDivider } from "../../components/dividers/small-divider";
-import { Map } from "../../components/map/map";
 const onSubmit = (values: any) => {
   console.log(values);
 };
