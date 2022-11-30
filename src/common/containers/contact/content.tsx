@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { SmallDivider } from "../../components/dividers/small-divider";
+import { Map } from "../../components/map/map";
 const onSubmit = (values: any) => {
   console.log(values);
 };
@@ -30,7 +31,7 @@ export const Content = () => {
           className="px-3 my-3 w-full lg:w-1/2 lg:my-0"
           data-testid="contact-section-1"
         >
-          Google Maps
+          {/* <Map /> */}
         </section>
         <section
           className="px-3 my-3 w-full lg:w-1/2 lg:my-0 flex flex-col align-center"
