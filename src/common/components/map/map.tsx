@@ -1,7 +1,7 @@
 import GoogleMapReact from "google-map-react";
 const AnyReactComponent = ({ text }: any) => <div>{text}</div>;
 
-export const Map = () => {
+export const GoogleMap = () => {
   const defaultProps = {
     center: {
       lat: 53.652_21,
@@ -13,7 +13,7 @@ export const Map = () => {
   return (
     <div className="mb-20" style={{ height: "40vh", width: "100%" }}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "no api key for you" }}
+        bootstrapURLKeys={{ key: "AIzaSyAb0djSdDxH4hbpfGVF3P9ybOaCUvcSPCc" }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >

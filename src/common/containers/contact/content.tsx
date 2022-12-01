@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { SmallDivider } from "../../components/dividers/small-divider";
+import { GoogleMap } from "../../components/map/map";
 const onSubmit = (values: any) => {
   console.log(values);
 };
@@ -30,7 +31,7 @@ export const Content = () => {
           className="px-3 my-3 w-full lg:w-1/2 lg:my-0"
           data-testid="contact-section-1"
         >
-          {/* <Map /> */}
+          {/* <GoogleMap /> */}
         </section>
         <section
           className="px-3 my-3 w-full lg:w-1/2 lg:my-0 flex flex-col align-center"
@@ -64,9 +65,8 @@ export const Content = () => {
                 className="mt-2 p-1.5 border rounded bg-gray-50 focus:outline-none text-sm"
                 id="contact-form-email"
                 placeholder="Your Email*"
-                type="text"
+                type="email"
                 {...register("email", {
-                  pattern: /^[\w%+.-]+@[\d.a-z-]+\.[a-z]{2,4}$/i,
                   required: true,
                 })}
               />
