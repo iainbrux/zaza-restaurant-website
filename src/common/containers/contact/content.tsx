@@ -1,14 +1,38 @@
-import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import { FieldValues, useForm } from "react-hook-form";
 import { SmallDivider } from "../../components/dividers/small-divider";
-const onSubmit = (values: any) => {
-  console.log(values);
+
+const sendEmail = (formValues: FieldValues) => {
+  if (
+    process.env.NEXT_PUBLIC_SERVICE_ID === undefined ||
+    process.env.NEXT_PUBLIC_TEMPLATE_ID === undefined ||
+    process.env.NEXT_PUBLIC_PUBLIC_KEY === undefined
+  ) {
+    return null;
+  }
+
+  return emailjs
+    .send(
+      process.env.NEXT_PUBLIC_SERVICE_ID,
+      process.env.NEXT_PUBLIC_TEMPLATE_ID,
+      formValues,
+      process.env.NEXT_PUBLIC_PUBLIC_KEY
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
 };
 
 export const Content = () => {
   const {
     register,
-    handleSubmit,
     formState: { errors },
+    handleSubmit,
   } = useForm();
 
   return (
@@ -36,11 +60,8 @@ export const Content = () => {
           className="px-3 my-3 w-full lg:w-1/2 lg:my-0 flex flex-col align-center"
           data-testid="contact-section-1"
         >
-          <form className="" onSubmit={handleSubmit(onSubmit)}>
+          <form className="" onSubmit={handleSubmit(sendEmail)}>
             <div className="flex flex-col mb-3">
-              {/* <label className="text-sm" htmlFor="contact-form-name">
-                Name
-              </label> */}
               <input
                 className="mt-2 p-1.5 border rounded bg-gray-50 focus:outline-none text-sm"
                 id="contact-form-name"
@@ -57,9 +78,6 @@ export const Content = () => {
               )}
             </div>
             <div className="flex flex-col mb-3">
-              {/* <label className="text-sm" htmlFor="contact-form-email">
-              Email
-            </label> */}
               <input
                 className="mt-2 p-1.5 border rounded bg-gray-50 focus:outline-none text-sm"
                 id="contact-form-email"
@@ -77,9 +95,6 @@ export const Content = () => {
               )}
             </div>
             <div className="flex flex-col mb-3">
-              {/* <label className="text-sm" htmlFor="contact-form-subject">
-              Subject
-            </label> */}
               <input
                 className="mt-2 p-1.5 border rounded bg-gray-50 focus:outline-none text-sm"
                 id="contact-form-subject"
@@ -96,9 +111,6 @@ export const Content = () => {
               )}
             </div>
             <div className="flex flex-col mb-3">
-              {/* <label className="text-sm" htmlFor="contact-form-message">
-              Message
-            </label> */}
               <textarea
                 className="mt-2 p-1.5 max-h-[300px] min-h-[150px] border rounded bg-gray-50 focus:outline-none text-sm"
                 id="contact-form-message"
