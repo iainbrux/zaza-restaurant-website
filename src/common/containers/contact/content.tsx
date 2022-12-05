@@ -12,9 +12,9 @@ export const Content = () => {
   } = useForm();
 
   return (
-    <main>
+    <main className="w-screen h-screen">
       <div className="container mx-auto flex flex-col pt-3 md:flex-row justify-center mb-20 mt-10">
-        <header className="flex flex-col">
+        <header>
           <h1 className="text-center text-5xl mb-4 uppercase">Contact</h1>
           <SmallDivider
             color="black"
