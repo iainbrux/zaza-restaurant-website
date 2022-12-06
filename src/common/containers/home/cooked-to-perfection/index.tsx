@@ -7,7 +7,7 @@ export const CookedToPerfection = () => {
       data-testid="cooked-to-perfection"
     >
       <div className="flex flex-col w-full h-full items-center justify-center uppercase">
-        <h1 className="text-7xl">cooked to perfection</h1>
+        <h1 className="text-7xl text-white">cooked to perfection</h1>
         <button
           className="bg-orange-200 text-black px-8 py-4 mt-8 uppercase text-sm"
           data-testid="home-page-menu-overview-button"

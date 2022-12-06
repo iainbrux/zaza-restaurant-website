@@ -34,11 +34,22 @@ export const ResmioForm = () => {
           data-testid="contact-section-1"
         >
           <div className="flex justify-center">
-            <p>
-              Use the Resmio booking system to book in advance. You can book for
-              up to six people. If you have a party larger than six, please
-              contact us on 01925 657 287 or email us at contact@zazamedbbq.com
-            </p>
+            <div className="flex flex-col text-xl w-[500px]">
+              <p>
+                Use the Resmio booking system to reserve a table upto 90 days in
+                advance.
+              </p>
+              <p className="mt-4 mb-4">
+                You can book a table for a maximum of 6 people. If you are
+                looking to book for a party larger than 6, please contact us
+                using the form on the contact page, or calling us on 01925 657
+                287
+              </p>
+              <p>
+                Pad this out with images? What other things could go here to
+                stop it looking so dull and boring
+              </p>
+            </div>
           </div>
         </section>
         <section
